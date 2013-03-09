@@ -8,5 +8,8 @@
 	<classpathentry kind="lib" path="lib/twitter4j-core-3.0.3.jar"/>
 	<classpathentry kind="lib" path="lib/ehcache-core-2.6.3.jar"/>
 	<classpathentry kind="lib" path="lib/guice-3.0.jar"/>
+	<classpathentry kind="lib" path="lib/javax.inject.jar"/>
+	<classpathentry kind="lib" path="lib/aopalliance.jar"/>
+	<classpathentry kind="lib" path="lib/guice-assistedinject-3.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
