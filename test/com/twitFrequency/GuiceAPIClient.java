@@ -2,6 +2,8 @@ package com.twitFrequency;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+import java.util.List;
+
 import com.google.inject.Guice;
 import com.google.inject.Injector;
 import com.twitFrequency.api.TwitFrequencyAuthService;
@@ -9,6 +11,7 @@ import com.twitFrequency.api.TwitFrequencyModule;
 import com.twitFrequency.api.TwitterUserService;
 import com.twitFrequency.data.TwitterDataFactory;
 import com.twitFrequency.data.TwitterUser;
+import com.twitFrequency.wordCount.WordCounter;
 
 import twitter4j.Status;
 import twitter4j.TwitterException;
@@ -44,10 +47,20 @@ public class GuiceAPIClient {
 	    TwitterUserService twitterUserService = injector.getInstance(TwitterUserService.class);
 	    
 	    
-		
+		StringBuilder builder = new StringBuilder();
 		for(Status status : twitterUserService.getHomeTimeLine(twitterUser))
 		{
 			System.out.println(status.getUser().getName() + ": " + status.getText());
+			builder.append(status.getText()).append(" ");
+			
+		}
+		
+		List<String> topTwitterWords = new WordCounter(builder.toString()).getTopWords(10);
+		
+		System.out.println("---------------TOP 10 WORDS--------------------");
+		for(String word : topTwitterWords)
+		{
+			System.out.println(word);
 		}
 	}
 

@@ -17,7 +17,7 @@ public class Util {
 	
 	private static final Pattern spaceRegex = Pattern.compile("\\s|" + System.getProperty("line.separator"));
 	private static final Pattern newLineRegex = Pattern.compile(System.getProperty("line.separator"));
-	private static final Map<String,String> stopWords = getStopWords();
+	private static final Map<String,String> stopWords = generateStopWords();
 	
 	public static List<String> getWordList(String target)
 	{
@@ -36,7 +36,12 @@ public class Util {
 		return wordList;
 	}
 	
-	private static Map<String, String> getStopWords() {
+	public static Map<String,String> getStopWords()
+	{
+		return stopWords;
+	}
+	
+	private static Map<String, String> generateStopWords() {
 		Map<String,String> stopWords = new HashMap<String, String>();
 		try {
 			BufferedReader reader = new BufferedReader(new FileReader("stopwords.txt"));

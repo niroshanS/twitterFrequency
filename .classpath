@@ -3,8 +3,8 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="test"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
-	<classpathentry kind="lib" path="E:/NiroSideProjects/junit4.11/junit4.11/junit-4.11.jar"/>
-	<classpathentry kind="lib" path="E:/NiroSideProjects/commons-lang3-3.1-bin/commons-lang3-3.1/commons-lang3-3.1.jar"/>
+	<classpathentry kind="lib" path="G:/NiroSideProjects/junit4.11/junit4.11/junit-4.11.jar"/>
+	<classpathentry kind="lib" path="G:/NiroSideProjects/commons-lang3-3.1-bin/commons-lang3-3.1/commons-lang3-3.1.jar"/>
 	<classpathentry kind="lib" path="lib/twitter4j-core-3.0.3.jar"/>
 	<classpathentry kind="lib" path="lib/ehcache-core-2.6.3.jar"/>
 	<classpathentry kind="lib" path="lib/guice-3.0.jar"/>
